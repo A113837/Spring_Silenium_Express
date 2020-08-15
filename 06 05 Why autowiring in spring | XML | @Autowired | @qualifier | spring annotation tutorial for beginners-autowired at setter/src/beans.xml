@@ -10,8 +10,7 @@
     
    <context:annotation-config />
 	    
-    <bean id="humanHeart" class="com.seleniumexpress.autowired.Heart" />
-    <bean id="octopusHeart" class="com.seleniumexpress.autowired.Heart" />
+   	 <bean id="heartObjectValue" class="com.seleniumexpress.autowired.Heart" />
 	<bean id="human" class="com.seleniumexpress.autowired.Human" >
 		 
 		
