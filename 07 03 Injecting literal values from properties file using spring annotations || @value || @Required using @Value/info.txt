@@ -1,0 +1,1 @@
+Injecting literal values from properties file using spring annotations || @value || @Required
