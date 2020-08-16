@@ -1,0 +1,59 @@
+package com.seleniumexpress.college;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class College {
+	
+	public void test() {
+		System.out.println("Testing this class College college methods");
+	}
+
+} 
+
+package com.seleniumexpress.college;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+
+public class Client {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext context = new AnnotationConfigApplicationContext(CollegeConfig.class);
+		
+		System.out.println("AnnotationConfig loaded: "+context);
+		College college = context.getBean("college", College.class);
+		System.out.println("The college object created by spring is:  "+ college);
+		college.test();
+		
+		 
+
+	}
+
+}
+
+package com.seleniumexpress.college;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(basePackages = "com.seleniumexpress.college")
+public class CollegeConfig {
+
+//	@Bean
+//	public College collegeBean() //collegeBean - bean id
+//	{
+//		
+//		College college = new College();
+//		return college;
+//	}
+	
+	
+}
+
+
+
