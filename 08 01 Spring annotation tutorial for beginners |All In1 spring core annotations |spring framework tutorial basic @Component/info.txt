@@ -1,0 +1,1 @@
+load class directly from java class without configure at xml file using @Component basic
