@@ -1,0 +1,2 @@
+07 06 Injecting literal values from properties file using spring annotations || @value || @Required using @Value at private field and remove setter method
+/
