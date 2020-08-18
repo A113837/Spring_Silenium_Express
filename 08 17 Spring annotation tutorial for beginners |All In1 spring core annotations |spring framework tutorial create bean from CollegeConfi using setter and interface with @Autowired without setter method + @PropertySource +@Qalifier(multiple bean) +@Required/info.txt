@@ -1,0 +1,7 @@
+add @Qualifier at setter collegeName and @Value
+
+@Required
+	@Value("${college.Name}")
+	public void setCollegeName(String collegeName) {
+		this.collegeName = collegeName;
+	}
