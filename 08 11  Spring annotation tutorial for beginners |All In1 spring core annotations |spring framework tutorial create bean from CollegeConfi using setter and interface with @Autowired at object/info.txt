@@ -1,0 +1,1 @@
+08 11 Spring annotation tutorial for beginners |All In1 spring core annotations |spring framework tutorial create bean from CollegeConfi using setter and interface with @Autowired at object
