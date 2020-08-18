@@ -1,0 +1,87 @@
+package com.seleniumexpress.college;
+
+import org.springframework.stereotype.Component;
+
+@Component("testId")
+public class College {
+	
+	private Principal principal;
+	
+	
+
+	
+	public void setPrincipal(Principal principal) {
+		this.principal = principal;
+		System.out.println("using setPrincipal method");
+	}	
+
+
+
+	public void test() {
+		System.out.println("invoke College class @Bean CollegeConfig testId method");
+		principal.principalInfo();
+	}
+
+
+
+
+
+}
+
+package com.seleniumexpress.college;
+
+public class Principal {
+	
+	public void principalInfo() {
+		System.out.println("Hi, I am your principal");
+		System.out.println("My name is James Bond");
+	}
+
+}
+
+
+package com.seleniumexpress.college;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(basePackages="com.seleniumexpress.college")
+public class CollegeConfig {
+	
+	@Bean
+	public Principal principalBean()
+	{
+		return new Principal();
+	}
+	
+	@Bean()
+	public College collegeBean() {
+		College college = new College();
+		college.setPrincipal(principalBean());
+		return college;
+	}
+
+}
+
+package com.seleniumexpress.college;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class Client {
+	public static void main(String[] args) {
+		
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(CollegeConfig.class);
+		
+		System.out.println("context loaded" + context);
+		College college = context.getBean("collegeBean", College.class);
+		System.out.println("college class loaded: "+ college);
+		college.test();
+		context.close();
+	}
+
+}
+
+
