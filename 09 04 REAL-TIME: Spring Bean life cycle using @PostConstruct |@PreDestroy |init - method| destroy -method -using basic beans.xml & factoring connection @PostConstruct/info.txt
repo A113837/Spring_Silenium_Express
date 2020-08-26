@@ -1,0 +1,14 @@
+@PostConstruct
+	public void createStudentDBConnection() throws ClassNotFoundException, SQLException
+	{
+		System.out.println("Create connection with studentDB");
+		//load driver
+		Class.forName(driver);
+		
+		//get a connection
+		con = DriverManager.getConnection(url, userName, password);		
+	}
+  
+   <context:annotation-config />
+  
+  
