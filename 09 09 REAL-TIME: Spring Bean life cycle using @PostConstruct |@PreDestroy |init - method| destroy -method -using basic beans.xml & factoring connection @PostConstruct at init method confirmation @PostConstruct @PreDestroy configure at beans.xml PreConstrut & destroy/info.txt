@@ -1,0 +1,2 @@
+<bean id="studentDAO" class="seleniumexpress.beanlifecycle.annotation.StudentDAO" 
+    init-method="init" destroy-method="destroy">
