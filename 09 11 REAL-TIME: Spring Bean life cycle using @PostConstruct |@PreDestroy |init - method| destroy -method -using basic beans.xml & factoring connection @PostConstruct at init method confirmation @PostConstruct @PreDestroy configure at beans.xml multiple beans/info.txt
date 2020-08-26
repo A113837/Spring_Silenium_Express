@@ -1,0 +1,11 @@
+    <bean id="studentDAO" class="seleniumexpress.beanlifecycle.annotation.StudentDAO" 
+    init-method="init" destroy-method="destroy">
+    	<property name="driver" value="com.mysql.jdbc.Driver"/>
+    	<property name="url"  value="jdbc:mysql://localhost:3306/esnew" />
+    	<property name="userName"  value="root" />
+    	<property name="password"  value="root" />
+    </bean>
+    
+    <bean id="hello" class="seleniumexpress.beanlifecycle.annotation.Hello"
+    init-method="init" destroy-method="destroy"></bean>
+    
