@@ -1,0 +1,6 @@
+	<bean id="heartObject" class="com.seleniumexpress.autowired.Heart"></bean>
+    
+    <bean id="human" class="com.seleniumexpress.autowired.Human" autowire="constructor">
+    	
+    </bean>
+    
