@@ -1,0 +1,25 @@
+
+
+	public void setDriver(String driver) {
+		System.out.println("setting driver..");
+		this.driver = driver;
+	}
+
+
+	public void setUrl(String url) {
+		System.out.println("setting Url..");
+		this.url = url;
+	}
+
+
+	public void setUserName(String userName) {
+		System.out.println("setting userName..");
+		this.userName = userName;
+	}
+
+
+
+	public void setPassword(String password) {
+		System.out.println("setting password..");
+		this.password = password;
+	}
