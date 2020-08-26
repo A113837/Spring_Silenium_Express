@@ -1,0 +1,14 @@
+	public void createStudentDBConnection() throws ClassNotFoundException, SQLException
+	{
+		//load driver
+		Class.forName(driver);
+		
+		//get a connection
+		con = DriverManager.getConnection(url, userName, password);		
+	}
+	
+	public void closeConnection() throws SQLException
+	{
+		//closing the connection
+		con.close();		
+	}
