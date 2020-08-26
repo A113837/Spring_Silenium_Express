@@ -1,0 +1,16 @@
+	@PostConstruct
+	public void init() throws ClassNotFoundException, SQLException
+	{
+		System.out.println("Create connection with studentDB inside init method");
+		createStudentDBConnection();
+	}
+		
+	public void createStudentDBConnection() throws ClassNotFoundException, SQLException
+	{
+		
+		//load driver
+		Class.forName(driver);
+		
+		//get a connection
+		con = DriverManager.getConnection(url, userName, password);		
+	}
